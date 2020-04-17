@@ -8,4 +8,21 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    = yield
+    .wrapper
+      .side-bar
+        = link_to "Health support", root_path, class: "logo"
+        %ul.contents
+          %li
+            = link_to "TOP", root_path, class: "content content--top"
+          %li
+            = link_to "食事記録", foods_path, class: "content content--food"
+          %li
+            = link_to "運動記録", exercises_path, class: "content content--exercise"
+          %li
+            = link_to "血糖値記録", measures_path, class: "content content--number"
+          %li
+            = link_to "お薬記録", drugs_path, class: "content content--medicine"
+          %li
+            = link_to "その他", "#", class: "content content--other"
+      .main-page
+        = yield

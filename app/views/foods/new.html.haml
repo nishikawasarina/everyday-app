@@ -1,0 +1,19 @@
+.foodWrapper
+  .foodWrapper-inner
+    %h1.title 食事を記録する
+    = form_with(model: @food, local: true, class: "foodForm") do |f|
+
+      
+      .foodForm__img
+        = f.label :image do
+          = f.file_field :image, class:"hidden"
+          = icon('fas', 'camera-retro')
+          .foodForm__img__text
+            画像を登録する
+      .cp_iptxt
+        = f.text_field :name, placeholder: "食べたもの", class: "ef"
+        %span.focus_line
+      
+      = f.select :time, [['朝食'], ['昼食'], ["夕食"], ["間食"]], {selected: 1}, {class: "foodForm__time"}
+      %br/
+      = f.submit value: "記録する"

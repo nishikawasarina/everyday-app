@@ -1,0 +1,83 @@
+.foodMain {
+  padding: 40px;
+  display: flex;
+  .recordBtn {
+    position: relative;
+    display: inline-block;
+    padding: .5em 4em;
+    border: 2px solid #333;
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+    transition: .3s;
+    height: 80px;
+  }
+  .recordBtn:hover {
+    background-color: rgb(255, 208, 176);
+  }
+  .recordBtn::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    content: '';
+    background: #333;
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: transform .3s;
+  }
+  .recordBtn:hover::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+  }
+  
+}
+
+.contents {
+  width: 800px;
+  height: calc(100% - 50px);
+  .content-title {
+    width: 100%;
+    .content-name {
+    text-align: center;
+    color: #8B4513;
+    font-size: 40px;
+    .fa-camera-retro {
+      margin-left: 30px;
+      color: coral;
+    }
+    }
+  }
+  
+  .calender {
+    width: 100%;
+    color: gray;
+    .calendar-title {
+      text-align: center;
+      font-size: 30px;
+    }
+    .calendar-table {
+
+      font-size: 40px;
+      .is-today {
+        color: rgb(51, 51, 51);
+        background-color: rgb(250, 160, 95);
+      }
+      th {
+        padding: 5px 30px 15px 30px;
+        border: 1px solid #D2B48C;
+        background-color: rgb(252, 241, 227);
+      }
+      td {
+        width: 20px;
+        height: 20px;
+        // line-height: 20px;
+        text-align: center;
+        padding-bottom: 40px;
+        border: 1px solid #D2B48C;
+      }
+    }
+  } 
+}

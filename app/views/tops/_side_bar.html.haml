@@ -1,0 +1,17 @@
+.side-bar
+  .logo
+    = link_to "Health support", root_path
+  %ul.contents
+    %li.content
+      = link_to "TOP", root_path, class: "content--top"
+    %li.content
+      = link_to "食事記録", foods_path, class: "content--food"
+    %li.content
+      = link_to "運動記録", "#", class: "content--exercise"
+    %li.content
+      = link_to "血糖値記録", "#", class: "content--number"
+    %li.content
+      = link_to "お薬記録", "#", class: "content--medicine"
+    %li.content
+      = link_to "その他", "#", class: "content--other"
+
