@@ -1,6 +1,6 @@
 class FoodsController < ApplicationController
   def index
-    
+    @foods = Food.all
   end
 
   def new
@@ -8,11 +8,18 @@ class FoodsController < ApplicationController
   end
 
   def create
-    Food.create(food_params)
-    redirect_to foods_path
+    # binding.pry
+    @food = Food.new(food_params)
+    if @food.save
+      redirect_to action: :index
+
+    else
+      render :new
+    end
+    
   end
 private
   def food_params
-    params.require(:food).permit(:name, :image, :time)
+    params.require(:food).permit(:name, :image, :start_time)
   end
 end

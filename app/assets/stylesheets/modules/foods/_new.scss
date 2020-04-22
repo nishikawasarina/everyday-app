@@ -1,33 +1,51 @@
-
-
-
 .foodWrapper {
   width: 100%;
-  height: 100%;
-  padding: 100px 0;
+  padding: 50px 0;
   .foodWrapper-inner {
     background-color: white;
     width: 900px;
     margin: auto;
-    padding: 90px 70px;
+    padding: 60px 70px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
     .title {
       font-size: 30px;
       margin-bottom: 20px;
     }
     .foodForm {
-      &__img {
-        label {
-          width: 100px;
-          height: 100px;
-          border: 1px solid gray;
-          input {
-          display: none;
-          } 
+      .formTitle {
+        font-size: 20px;
+        color: rgb(90, 90, 90);
+        margin-bottom: 20px;
+        i {
+          color: rgb(255, 174, 119);
         }
+        // margin: 20px 0;
+      }
+
+      &__img {
+        margin: 20px 40px;
+        .imgBox {
+          width: 90px;
+          padding: 30px;
+          border: 1px solid gray;
+          background-color: rgba(255, 208, 176, 0.705);
+          text-align: center;
+          // margin: auto;
+          // line-height: 100px;
+          i {
+            font-size: 40px;
+          }
+        }
+        input {
+        display: none;
+        } 
+      }
+      .foodName {
+        margin: 20px 40px;
+        width: 40%;
       }
       .cp_iptxt {
         position: relative;
-        width: 80%;
         margin: 40px 0;
       }
       .cp_iptxt input[type='text'] {
@@ -86,7 +104,39 @@
         transition: 0.3s;
         color: rgb(255, 102, 0);
       }
-      
+      .foodTime {
+        margin: 20px 40px;
+        &__select {
+          // height: 40px;
+          // width: 30px;
+          font-size: 20px;
+          background-color: rgba(255, 208, 176, 0.705);
+          margin-bottom: 30px;
+          &:focus {
+            border: 2px solid rgba(255, 102, 0, 0.527);
+            outline: 0;
+          }
+        }
+        &__text {
+          font-size: 15px;
+          color: gray;
+        }
+      }
+      #food_start_time_1i, #food_start_time_2i {
+        display: none;
+      }
+      .foodContents {
+        display: flex;
+      }
+      .foodSubmit {
+        height: 70px;
+        width: 200px;
+        background-color: rgb(255, 156, 89);
+        border: none;
+        color: white;
+        border-radius: 3px;
+        font-size: 20px;
+      }
     }
   }
 }
