@@ -1,10 +1,10 @@
 # README
 
-# アプリ名: HealthSupport
+# アプリ名: EverydayApp
 
 
 ## 概要
-- 糖尿病患者さんが食事や血糖値、運動などを記録するためのアプリ
+### 糖尿病患者さんが食事や血糖値、運動などを記録するためのアプリ
   - 画像付きで食事内容を記録
   - 記録した食事がカレンダーで表示され、過去の食事記録を振り返ることができる
   - 血糖値の記録
@@ -28,8 +28,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|image|string||
-
+|image|string|
+|||
 #### Association
 - belongs_to :user
 - belongs_to :group
