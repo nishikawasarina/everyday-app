@@ -1,0 +1,18 @@
+
+.chart {
+  &__text {
+    margin-top: 30px;
+    .fa-mouse-pointer {
+      display: inline-block;
+      color:  rgba(33, 147, 253, 0.801);
+      // background-color: rgba(33, 147, 253, 0.801);
+      padding: 8px;
+    }
+  }
+}
+.recordBtn--measure:hover {
+  background-color: rgb(176, 219, 255);
+  &::after {
+    border-top-color: rgb(176, 219, 255);
+  }
+}
