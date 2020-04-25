@@ -1,0 +1,7 @@
+.newWrapper
+  .newWrapper-inner
+    = form_with(model: @measure, local: true, class: "foodForm") do |f|
+      .cp_iptxt
+        = f.text_field :measure, placeholder: "血糖値を入力してください", class: "ef"
+        %span.focus_line
+      = f.submit value: "記録する", class: "foodSubmit"

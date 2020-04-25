@@ -2,6 +2,6 @@ Rails.application.routes.draw do
   root 'tops#index'
   resources :foods, only: [:index, :new, :create]
   resources :exercises, only: :index
-  resources :measures, only: :index
+  resources :measures, only: [:index, :new, :create]
   resources :drugs, only: :index
 end

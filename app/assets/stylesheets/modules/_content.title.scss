@@ -1,0 +1,14 @@
+.content-name {
+  padding: 0.4em 0.5em;
+  color: #494949;
+  background: #f4f4f4d0;
+  padding: 15px;
+  font-size: 25px;
+  letter-spacing: 3px;
+  &--measure {
+    border-left: solid 10px #7daae6;
+  }
+  &--food {
+    border-left: solid 10px #e69b7d;
+  }
+}

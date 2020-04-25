@@ -1,8 +1,8 @@
-.foodMain
+.Main
   
   .contents
     .content-title
-      %h2.content-name
+      %h2.content-name.content-name--food
         食事管理
     .calender
       = month_calendar events: @foods do |date, foods|
@@ -12,7 +12,7 @@
             = image_tag food.image.to_s, size: "100x90", class: "food_img"
 
 
-  = link_to new_food_path, class: "recordBtn" do
+  = link_to new_food_path, class: "recordBtn recordBtn--food" do
     %i.fas.fa-camera-retro
     %br/
     食事を記録
