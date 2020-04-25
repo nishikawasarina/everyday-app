@@ -3,7 +3,7 @@ class CreateFoods < ActiveRecord::Migration[5.2]
     create_table :foods do |t|
       t.string  :name, null: false
       t.string  :image
-      t.string  :time, null: false
+      t.datetime :start_time
       t.timestamps
     end
   end

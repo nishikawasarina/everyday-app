@@ -5,15 +5,31 @@
 
       
       .foodForm__img
+        .formTitle
+          = icon('fas', 'check')
+          食事の画像
         = f.label :image do
-          = f.file_field :image, class:"hidden"
-          = icon('fas', 'camera-retro')
-          .foodForm__img__text
-            画像を登録する
-      .cp_iptxt
-        = f.text_field :name, placeholder: "食べたもの", class: "ef"
-        %span.focus_line
-      
-      = f.select :time, [['朝食'], ['昼食'], ["夕食"], ["間食"]], {selected: 1}, {class: "foodForm__time"}
-      %br/
-      = f.submit value: "記録する"
+          = f.file_field :image, class:"hidden", type: "file"
+          .imgBox
+            = icon('fas', 'camera-retro')
+            %br/
+            画像を選択
+      .foodContents
+        .foodName
+          .formTitle
+            = icon('fas', 'check')
+            食事の名前
+          .cp_iptxt
+            = f.text_field :name, placeholder: "食べたもの", class: "ef"
+            %span.focus_line
+        
+        -# = f.select :time, [['朝食'], ['昼食'], ["夕食"], ["間食"]], {selected: 1}, {class: "foodForm__time"}
+        -# = form.label :start_time
+        .foodTime
+          .formTitle
+            = icon('fas', 'check')
+            食事の時間
+          .foodTime__text
+            日付-時：分
+          = f.datetime_select :start_time, {}, class: "foodTime__select"
+      = f.submit value: "記録する", class: "foodSubmit"

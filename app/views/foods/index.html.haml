@@ -5,25 +5,14 @@
       %h2.content-name
         食事管理
     .calender
-      %h2.calendar-title
-        %span#js-year>
-        年
-        = succeed "\u{6708}" do
-          %span#js-month
-      %table.calendar-table
-        %thead
-          %tr
-            %th 日
-            %th 月
-            %th 火
-            %th 水
-            %th 木
-            %th 金
-            %th 土
-        %tbody#js-calendar-body
+      = month_calendar events: @foods do |date, foods|
+        = date.day
+        - foods.first(1).each do |food|
+          = link_to "#" do
+            = image_tag food.image.to_s, size: "100x90", class: "food_img"
 
 
   = link_to new_food_path, class: "recordBtn" do
     %i.fas.fa-camera-retro
     %br/
-    食事を記録する
+    食事を記録
