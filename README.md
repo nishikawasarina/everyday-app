@@ -29,7 +29,12 @@
 |------|----|-------|
 |name|string|null: false|
 |image|string|
-|||
+|start_time|datetime|null: false｜
+
+### measuresテーブル
+|Column|Type|Options|
+|------|----|-------|
+|measure|integer|null: false|
 #### Association
 - belongs_to :user
 - belongs_to :group
