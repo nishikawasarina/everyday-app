@@ -2,6 +2,9 @@
   width: 100%;
   padding: 50px 0;
   .newWrapper-inner {
+    &--mea {
+      width: 400px;
+    }
     background-color: white;
     width: 900px;
     margin: auto;
@@ -12,6 +15,12 @@
       margin-bottom: 20px;
     }
     .foodForm {
+      position: relative;
+      .text {
+        position: absolute;
+        top: 5px;
+        right: 20px;
+      }
       .formTitle {
         font-size: 20px;
         color: rgb(90, 90, 90);
@@ -44,6 +53,7 @@
         margin: 20px 40px;
         width: 40%;
       }
+      
       .cp_iptxt {
         position: relative;
         margin: 40px 0;

@@ -13,9 +13,11 @@
  }
  
 @import "reset";
+@import "config/colors";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "side.bar";
+@import "modules/flash";
 @import "modules/top/index";
 @import "modules/foods/index";
 @import "modules/measures/index";

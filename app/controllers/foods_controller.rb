@@ -12,11 +12,11 @@ class FoodsController < ApplicationController
     @food = Food.new(food_params)
     if @food.save
       redirect_to action: :index
-
+      flash[:notice] = "食事を記録しました！"
     else
+      flash[:alert] = "食事内容を入力してください"
       render :new
     end
-    
   end
 private
   def food_params
