@@ -7,7 +7,12 @@
       .chart__text
         = icon('fas', 'mouse-pointer')
         カーソルを青の丸に合わせると詳細を確認できます。
+      .chart__value 血糖値(mg/dl)
       = line_chart @measures, width: "800px", height: "600px"
+      .chart__days
+        測定
+        %br/
+        日時
   =link_to new_measure_path, class: "recordBtn recordBtn--measure" do
     %i.fas.fa-pen
     %br/

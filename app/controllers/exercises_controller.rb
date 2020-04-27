@@ -11,8 +11,9 @@ class ExercisesController < ApplicationController
     @exercise = Exercise.new(exercise_params)
     if @exercise.save
       redirect_to action: :index
-
+      flash[:notice] = "運動を記録しました！"
     else
+      flash[:alert] = "運動内容を入力してください"
       render :new
     end
     

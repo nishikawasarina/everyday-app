@@ -9,8 +9,10 @@ class MeasuresController < ApplicationController
     @measure = Measure.new(measure_params)
     if @measure.save
       redirect_to action: :index
+      flash[:notice] = "血糖値を記録しました！"
 
     else
+      flash[:alert] = "血糖値を入力してください"
       render :new
     end
   end
