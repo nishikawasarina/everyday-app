@@ -92,6 +92,8 @@ GEM
       sassc (>= 1.11)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    groupdate (5.0.0)
+      activesupport (>= 5)
     haml (5.1.2)
       temple (>= 0.8.0)
       tilt
@@ -168,6 +170,9 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.3.0)
       loofah (~> 2.3)
+    rails-i18n (5.1.3)
+      i18n (>= 0.7, < 2)
+      railties (>= 5.0, < 6)
     railties (5.2.4.2)
       actionpack (= 5.2.4.2)
       activesupport (= 5.2.4.2)
@@ -250,6 +255,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   erb2haml
   font-awesome-sass
+  groupdate
   haml-rails
   jbuilder (~> 2.5)
   jquery-rails
@@ -259,6 +265,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 3.11)
   rails (~> 5.2.4, >= 5.2.4.2)
+  rails-i18n
   sass-rails (~> 5.0)
   selenium-webdriver
   simple_calendar (~> 2.0)

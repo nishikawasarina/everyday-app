@@ -85,14 +85,21 @@
   border: 1px solid rgb(250, 160, 95);
 }
 .simple-calendar {
+  th {
+    text-align: center;
+  }
   .calendar-heading {
     text-align: center;
     font-size: 30px;
     a {
-      color: rgb(255, 126, 34);
+      color: black;
       text-decoration: none;
       font-size: 20px;
+      font-weight: bolder;
     }
+  }
+  .calendar-title {
+    margin: 0 50px;
   }
   .day {height: 100px;}
 
