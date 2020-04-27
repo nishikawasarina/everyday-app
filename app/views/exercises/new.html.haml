@@ -1,0 +1,32 @@
+.newWrapper
+  .newWrapper-inner
+    %h1.title 今日の運動を記録する
+    = form_with(model: @exercise, local: true, class: "foodForm") do |f|
+      .foodTime
+        .formTitle
+          = icon('fas', 'check')
+          食事の時間
+        .foodTime__text
+          日付-時：分
+        = f.datetime_select :start_time, {}, class: "foodTime__select"
+      .exeMenu
+        .formTitle
+          = icon('fas', 'check')
+          実施したメニュー
+        .cp_iptxt
+          = f.text_field :menu, placeholder: "例）ウォーキング 30分", class: "ef"
+          %span.focus_line
+      .exeAmount
+        .formTitle
+          = icon('fas', 'check')
+          医師から指示された運動量の達成度
+        = f.select :amount, [['100％達成できた'], ['80％達成できた'], ['50％達成できた'], ['50%以下・出来なかった']], {prompt: "選択してください"}, {class: "box"}
+      .reason
+        .formTitle
+          = icon('fas', 'check')
+          「出来なかった」の場合の理由
+        .cp_iptxt
+          = f.text_field :memo, placeholder: "入力してください", class: "ef"
+          %span.focus_line
+
+      = f.submit value: "記録する", class: "foodSubmit"

@@ -1,1 +1,36 @@
-運動！
+.Main
+  
+  .contents
+    .content-title
+      %h2.content-name.content-name--exe
+        運動記録
+      
+    .calender
+      = month_calendar events: @exercises do |date, exercises|
+        = date.day
+        - exercises.first(1).each do |exercise|
+          = link_to "#" do
+            - if exercise.amount == '100％達成できた'
+              = image_tag '1.png', class: "exe_img"
+            - elsif exercise.amount == '80％達成できた'
+              = image_tag '2.png', class: "exe_img"
+            - elsif exercise.amount == '50％達成できた'
+              = image_tag '3.png', class: "exe_img"
+            - elsif exercise.amount == '50%以下・出来なかった'
+              = image_tag '4.png', class: "exe_img"
+            .exe_menu
+              = exercise.menu
+    .content-exp 
+      = image_tag '1.png', size: "25x25", class: "exp_img"
+      .exp_text 100％達成できた
+      = image_tag '2.png', size: "25x25", class: "exp_img"
+      .exp_text 80％達成できた
+      = image_tag '3.png', size: "25x25", class: "exp_img"
+      .exp_text 50％達成できた
+      = image_tag '4.png', size: "25x25", class: "exp_img"
+      .exp_text 50%以下・出来なかった
+  = link_to new_exercise_path, class: "recordBtn recordBtn--exe" do
+    %i.fas.fa-walking
+    %br/
+    運動を記録
+  
