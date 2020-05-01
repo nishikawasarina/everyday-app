@@ -9,8 +9,11 @@
         = date.day
         - foods.first(1).each do |food|
           = link_to "#" do
-            = image_tag food.image.to_s, size: "100x90", class: "food_img"
-
+            - if food.image.present?
+              = image_tag food.image.to_s, size: "100x90", class: "food_img"
+            - else
+              .foodName
+                = food.name
 
   = link_to new_food_path, class: "recordBtn recordBtn--food" do
     %i.fas.fa-camera-retro
