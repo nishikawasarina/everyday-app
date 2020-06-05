@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: everyday-app_production
-  username: everyday-app
-  password: <%= ENV['EVERYDAY-APP_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
