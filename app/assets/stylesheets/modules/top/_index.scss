@@ -1,0 +1,37 @@
+.topContents {
+  padding: 75px 100px;
+  .headContents {
+    display: flex;
+
+  }
+   .topBtn {
+    text-decoration: none;
+    color:rgb(117, 116, 116);
+    display: block;
+    width: 400px;
+    height: 250px;
+    border: rgba(117, 116, 116, 0.705) solid 2px;
+    border-radius: 20px;
+    &__head {
+      margin: 20px auto;
+    }
+    &__foot {
+      margin: 45px;
+    }
+    text-align: center;
+    font-size: 50px;
+    &__title {
+      line-height: 250px;
+    }
+    transition: .3s;
+    &--food:hover {
+      background-color: rgb(255, 208, 176);
+    }
+    &--exe:hover {
+      background-color: rgb(255, 215, 245);
+    }
+    &--mea:hover {
+      background-color: rgb(176, 219, 255);
+    }
+  }
+}

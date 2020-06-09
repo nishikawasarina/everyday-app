@@ -1,1 +1,11 @@
-top!
+.topContents
+  .headContents
+    = link_to foods_path, class: "topBtn topBtn__head topBtn--food" do
+      .topBtn__title
+        食事を記録
+    = link_to exercises_path, class: "topBtn topBtn__head topBtn--exe" do
+      .topBtn__title
+        運動を記録
+  = link_to measures_path, class: "topBtn topBtn__foot topBtn--mea" do
+    .topBtn__title
+      血糖値を記録
